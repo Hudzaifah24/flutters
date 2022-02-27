@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+
+  int _selectedIndex = 0; 
+  
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -335,16 +338,72 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget tabBars() {
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          TabBar(
+            tabs: [
+              Tab(
+                text: 'Incoming',
+              ),
+              Tab(
+                text: 'Outgoing',
+              ),
+              Tab(
+                text: 'Missed',
+              ),
+            ],
+          )
+        ],
+      );
+    }
 
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            header(),
-            aboutHeader(),
-            aboutBody(),
-            btnEdtPrfl(),
-            highlight(),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              header(),
+              aboutHeader(),
+              aboutBody(),
+              btnEdtPrfl(),
+              highlight(),
+              tabBars(),
+              Scaffold(
+                body: TabBarView(
+                  children: [
+                    Text(
+                      "Page 1",
+                    ),
+                    Text(
+                      "Page 2",
+                    ),
+                    Text(
+                      "Page 3",
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              tooltip: "Home",
+              icon: Icon(Icons.home),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_bag),
+              label: '',
+            ),
           ],
         ),
       ),

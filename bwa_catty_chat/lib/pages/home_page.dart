@@ -102,7 +102,9 @@ class HomePage extends StatelessWidget {
                 'Type message ...',
                 style: inputTextStyle
               ),
-              Icon(Icons.send),
+              Icon(
+                Icons.send
+                ),
             ],
           ),
         );
