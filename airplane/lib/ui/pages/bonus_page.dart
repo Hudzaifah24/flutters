@@ -18,7 +18,7 @@ class BonusPage extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              "assets/images/image_card.png"
+              "assets/images/image_cart.png"
             ),
           ),
           boxShadow: [
@@ -119,7 +119,7 @@ class BonusPage extends StatelessWidget {
         ),
         child: Text(
           "We give you early credit so that\nyou can buy a flight ticket",
-          style: greenTextStyle.copyWith(
+          style: greyTextStyle.copyWith(
             fontSize: 16,
             fontWeight: light
           ),

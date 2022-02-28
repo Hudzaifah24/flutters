@@ -1,3 +1,4 @@
+import 'package:airplane/ui/pages/home_page.dart';
 import 'package:airplane/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:flutter/material.dart';
 import 'package:airplane/shared/theme.dart';
@@ -7,6 +8,10 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    Widget buildContent(){
+      return HomePage();
+    }
 
     Widget customButtomNavigation() {
       return Align(
@@ -20,123 +25,24 @@ class MainPage extends StatelessWidget {
             borderRadius: BorderRadius.circular(18),
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CustomBottomNavigationItem(
-                imageUrl: "assets/images/icon_home",
+                imageUrl: "assets/images/icon_home.png",
                 isSelected: true,
               ),
               CustomBottomNavigationItem(
-                imageUrl: "assets/images/icon_booking",
+                imageUrl: "assets/images/icon_booking.png",
                 isSelected: false,
               ),
               CustomBottomNavigationItem(
-                imageUrl: "assets/images/icon_card",
+                imageUrl: "assets/images/icon_cart.png",
                 isSelected: false,
               ),
               CustomBottomNavigationItem(
-                imageUrl: "assets/images/icon_setting",
+                imageUrl: "assets/images/icon_setting.png",
                 isSelected: false,
               ),
-              // Column(
-              //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //   children: [
-              //     SizedBox(),
-              //     Container(
-              //       width: 24,
-              //       height: 24,
-              //       decoration: BoxDecoration(
-              //         image: DecorationImage(
-              //           image: AssetImage(
-              //             "assets/images/icon_home.png",
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //     Container(
-              //       width: 30,
-              //       height: 2,
-              //       decoration: BoxDecoration(
-              //         color: kPrimaryColor,
-              //         borderRadius: BorderRadius.circular(18),
-              //       ),
-              //     )
-              //   ],
-              // ),
-              // Column(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
-              //     SizedBox(),
-              //     Container(
-              //       width: 24,
-              //       height: 24,
-              //       decoration: BoxDecoration(
-              //         image: DecorationImage(
-              //           image: AssetImage(
-              //             "assets/images/icon_booking.png",
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //     Container(
-              //       width: 30,
-              //       height: 2,
-              //       decoration: BoxDecoration(
-              //         color: kTransparentColor,
-              //         borderRadius: BorderRadius.circular(18),
-              //       ),
-              //     )
-              //   ],
-              // ),
-              // Column(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
-              //     SizedBox(),
-              //     Container(
-              //       width: 24,
-              //       height: 24,
-              //       decoration: BoxDecoration(
-              //         image: DecorationImage(
-              //           image: AssetImage(
-              //             "assets/images/icon_card.png",
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //     Container(
-              //       width: 30,
-              //       height: 2,
-              //       decoration: BoxDecoration(
-              //         color: kTransparentColor,
-              //         borderRadius: BorderRadius.circular(18),
-              //       ),
-              //     )
-              //   ],
-              // ),
-              // Column(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
-              //     SizedBox(),
-              //     Container(
-              //       width: 24,
-              //       height: 24,
-              //       decoration: BoxDecoration(
-              //         image: DecorationImage(
-              //           image: AssetImage(
-              //             "assets/images/icon_setting.png",
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //     Container(
-              //       width: 30,
-              //       height: 2,
-              //       decoration: BoxDecoration(
-              //         color: kTransparentColor,
-              //         borderRadius: BorderRadius.circular(18),
-              //       ),
-              //     )
-              //   ],
-              // ),
             ],
           ),
         ),
@@ -147,9 +53,7 @@ class MainPage extends StatelessWidget {
       backgroundColor: kBackGroundColor,
       body: Stack(
         children: [
-          Text(
-            "Main Page"
-          ),
+          buildContent(),
           customButtomNavigation(),
         ],
       )
