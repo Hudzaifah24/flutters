@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
 
-  int _selectedIndex = 0; 
-  
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -205,21 +203,24 @@ class HomePage extends StatelessWidget {
         width: double.infinity,
         child: Row(
           children: [
-            Container(
-              child: OutlinedButton(
-                child: Text(
-                  "Edit Profil",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w200,
-                    color: Colors.black,
-                    fontSize: 16
+            Expanded(
+              child: Container(
+                child: OutlinedButton(
+                  child: Text(
+                    "Edit Profil",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w200,
+                      color: Colors.black,
+                      fontSize: 16
+                    ),
                   ),
+                  onPressed: () {},
                 ),
-                onPressed: () {},
               ),
             ),
-            Spacer(),
             Container(
+              width: 50,
+              alignment: Alignment.center,
               padding: EdgeInsets.only(
                 left: 7,
               ),
@@ -239,172 +240,581 @@ class HomePage extends StatelessWidget {
 
     Widget highlight() {
       return Container(
-        padding: EdgeInsets.only(top: 20, right: 20, left: 20),
+        padding: EdgeInsets.only(top: 15, right: 20, left: 20),
         decoration: BoxDecoration(
           color: Colors.white,
         ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: <Widget>[
+              Column(
+                children: [
+                  Container(
+                    width: 65,
+                    height: 65,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(
+                        color: Colors.black12,
+                        width: 3,
+                        style: BorderStyle.solid
+                      )
+                    ),
+                    child: FloatingActionButton(
+                      onPressed: (){},
+                      backgroundColor: Colors.transparent,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          image: DecorationImage(
+                            image: AssetImage(
+                              "assets/images/highlight1.jpg",
+                            ),
+                            fit: BoxFit.cover
+                          ),
+                        ),
+                      )
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    "hbd",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              Column(
+                children: [
+                  Container(
+                    width: 65,
+                    height: 65,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(
+                        color: Colors.black12,
+                        width: 3,
+                        style: BorderStyle.solid
+                      )
+                    ),
+                    child: FloatingActionButton(
+                      onPressed: (){},
+                      backgroundColor: Colors.transparent,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          image: DecorationImage(
+                            image: AssetImage(
+                              "assets/images/highlight2.jpg",
+                            ),
+                            fit: BoxFit.cover
+                          ),
+                        ),
+                      )
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    "dirumah aja",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 20
+              ),
+              Column(
+                children: [
+                  Container(
+                    width: 65,
+                    height: 65,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(
+                        color: Colors.black12,
+                        width: 3,
+                        style: BorderStyle.solid
+                      )
+                    ),
+                    child: FloatingActionButton(
+                      onPressed: (){},
+                      backgroundColor: Colors.transparent,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          image: DecorationImage(
+                            image: AssetImage(
+                              "assets/images/highlight3.jpg",
+                            ),
+                            fit: BoxFit.cover
+                          ),
+                        ),
+                      )
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    "gamer",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 20
+              ),
+              Column(
+                children: [
+                  Container(
+                    width: 65,
+                    height: 65,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(
+                        color: Colors.black12,
+                        width: 3,
+                        style: BorderStyle.solid
+                      )
+                    ),
+                    child: FloatingActionButton(
+                      onPressed: (){},
+                      backgroundColor: Colors.transparent,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          image: DecorationImage(
+                            image: AssetImage(
+                              "assets/images/highlight4.jpg",
+                            ),
+                            fit: BoxFit.cover
+                          ),
+                        ),
+                      )
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    "jalan skuy",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 20
+              ),
+              Column(
+                children: [
+                  Container(
+                    width: 65,
+                    height: 65,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(
+                        color: Colors.black12,
+                        width: 3,
+                        style: BorderStyle.solid
+                      )
+                    ),
+                    child: FloatingActionButton(
+                      onPressed: (){},
+                      backgroundColor: Colors.transparent,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          image: DecorationImage(
+                            image: AssetImage(
+                              "assets/images/highlight5.jpg",
+                            ),
+                            fit: BoxFit.cover
+                          ),
+                        ),
+                      )
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    "kata:-D",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 20
+              ),
+              Column(
+                children: [
+                  Container(
+                    width: 65,
+                    height: 65,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(
+                        color: Colors.black12,
+                        width: 3,
+                        style: BorderStyle.solid
+                      )
+                    ),
+                    child: FloatingActionButton(
+                      onPressed: (){},
+                      backgroundColor: Colors.white,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                        child: Icon(
+                          Icons.add,
+                          color: Colors.black,
+                        ),
+                      )
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    "Baru",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 20
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget postBar() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: 20
+        ),
+        color: Colors.white,
         child: Row(
-          children: <Widget>[
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
             Column(
               children: [
                 Container(
-                  width: 65,
-                  height: 65,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    border: Border.all(
-                      color: Colors.black12,
-                      width: 3,
-                      style: BorderStyle.solid
-                    )
+                  padding: EdgeInsets.symmetric(
+                    vertical: 8
                   ),
-                  child: FloatingActionButton(
-                    onPressed: (){},
-                    backgroundColor: Colors.transparent,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                        image: DecorationImage(
-                          image: AssetImage(
-                            "assets/images/profile.jpeg",
-                          ),
-                          fit: BoxFit.cover
-                        ),
-                      ),
-                    )
+                  child: Icon(
+                    Icons.apps_outlined,
+                    color: Colors.black,
                   ),
                 ),
-                SizedBox(
-                  height: 5,
-                ),
-                Text(
-                  "jalan skuy",
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w300
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              width: 20,
+                // Container(
+                //   width: 100,
+                //   decoration: BoxDecoration(
+                //     border: Border(
+                //       bottom: BorderSide(
+                //         color: Colors.black,
+                //         width: 1.5,
+                //       ),
+                //     ),
+                //   ),
+                // ),
+              ]
             ),
             Column(
               children: [
                 Container(
-                  width: 65,
-                  height: 65,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    border: Border.all(
-                      color: Colors.black12,
-                      width: 3,
-                      style: BorderStyle.solid
-                    )
-                  ),
-                  child: FloatingActionButton(
-                    onPressed: (){},
-                    backgroundColor: Colors.transparent,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                        image: DecorationImage(
-                          image: AssetImage(
-                            "assets/images/profile.jpeg",
-                          ),
-                          fit: BoxFit.cover
-                        ),
-                      ),
-                    )
+                  child: Icon(
+                    Icons.play_arrow_outlined,
+                    color: Colors.grey,
+                    size: 30,
                   ),
                 ),
-                SizedBox(
-                  height: 5,
-                ),
-                Text(
-                  "jalan skuy",
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w300
-                  ),
-                ),
-              ],
+                // Container(
+                //   width: 100,
+                //   decoration: BoxDecoration(
+                //     border: Border(
+                //       bottom: BorderSide(
+                //         color: Colors.black,
+                //         width: 1.5,
+                //       ),
+                //     ),
+                //   ),
+                // ),
+              ]
             ),
-            SizedBox(
-              width: 20
+            Column(
+              children: [
+                Container(
+                  child: Icon(
+                    Icons.perm_contact_calendar_rounded,
+                    color: Colors.grey,
+                  ),
+                ),
+                // Container(
+                //   width: 100,
+                //   decoration: BoxDecoration(
+                //     border: Border(
+                //       bottom: BorderSide(
+                //         color: Colors.black,
+                //         width: 1.5,
+                //       ),
+                //     ),
+                //   ),
+                // ),
+              ]
             ),
           ],
         ),
       );
     }
 
-    Widget tabBars() {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+    Widget posts() {
+      return GridView.count(
+        crossAxisCount: 3,
+        shrinkWrap: true,
         children: [
-          TabBar(
-            tabs: [
-              Tab(
-                text: 'Incoming',
-              ),
-              Tab(
-                text: 'Outgoing',
-              ),
-              Tab(
-                text: 'Missed',
-              ),
-            ],
-          )
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post1.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post2.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post3.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post4.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post5.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post6.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post7.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post8.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post9.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post10.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post11.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post12.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post13.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post14.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post15.jpg",
+                ),
+              )
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(1),
+            width: 20,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/images/post16.jpg",
+                ),
+              )
+            ),
+          ),
         ],
       );
     }
 
-    return DefaultTabController(
-      length: 3,
+    return SafeArea(
       child: Scaffold(
-        body: SafeArea(
-          child: Column(
-            children: <Widget>[
-              header(),
-              aboutHeader(),
-              aboutBody(),
-              btnEdtPrfl(),
-              highlight(),
-              tabBars(),
-              Scaffold(
-                body: TabBarView(
-                  children: [
-                    Text(
-                      "Page 1",
-                    ),
-                    Text(
-                      "Page 2",
-                    ),
-                    Text(
-                      "Page 3",
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(
-              tooltip: "Home",
-              icon: Icon(Icons.home),
-              label: '',
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                header(),
+                aboutHeader(),
+                aboutBody(),
+                btnEdtPrfl(),
+                highlight(),
+                postBar(),
+                posts(),
+              ],
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_bag),
-              label: '',
-            ),
-          ],
+          )
         ),
       ),
     );
