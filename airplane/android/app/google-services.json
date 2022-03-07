@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1025505731950",
+    "project_id": "airplane-fedf5",
+    "storage_bucket": "airplane-fedf5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025505731950:android:75fbf9e6af2f4e26048d7f",
+        "android_client_info": {
+          "package_name": "com.hudzaifah.airplane"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025505731950-u8r6fmeg2qngvpfdnio23etqp3nov6gl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJlLOv4kYgwVYCxrzjxcCYRjHTfmNyXF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025505731950-u8r6fmeg2qngvpfdnio23etqp3nov6gl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1025505731950-eq39jqeon4vbibcskkuteh6b8vvcpfo4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hudzaifah.airplane"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
