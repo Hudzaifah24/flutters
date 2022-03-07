@@ -60,7 +60,7 @@ class SignUpPage extends StatelessWidget {
           title: "Hobby", 
           hintText: "Your hobby",
           controller: hobbyController,
-        )
+        );
       }
 
       Widget submitButton(){
